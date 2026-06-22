@@ -109,7 +109,7 @@
 
     .summary {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 10px;
       margin-bottom: 28px;
     }
@@ -218,18 +218,6 @@
       font-size: 14px;
     }
 
-    .price {
-      margin: auto 0 0;
-      padding-top: 8px;
-      border-top: 1px solid var(--line);
-      color: #344054;
-      font-size: 13px;
-    }
-
-    .price b {
-      color: var(--ink);
-    }
-
     .btn {
       display: inline-flex;
       justify-content: center;
@@ -283,7 +271,7 @@
     <div class="wrap hero">
       <p class="eyebrow">NAVER 넾다세일 · 삼성전자 감사 페스티벌</p>
       <h1>카테고리별 추천 모델만 가볍게 보기</h1>
-      <p class="lead">같은 모델도 판매자와 혜택 조건에 따라 최종 결제 금액이 달라질 수 있어요. 이 페이지는 전체 상품 나열이 아니라 먼저 확인할 만한 후보만 정리했습니다.</p>
+      <p class="lead">같은 모델도 판매자와 혜택 조건이 달라질 수 있어요. 이 페이지는 전체 상품 나열이 아니라 먼저 확인할 만한 후보만 정리했습니다.</p>
       <div class="notice">이 페이지에는 네이버 쇼핑 커넥트 제휴 링크가 포함되어 있으며, 링크를 통한 구매 시 작성자에게 수수료가 지급될 수 있습니다.</div>
     </div>
     <nav class="wrap" aria-label="카테고리">
@@ -300,9 +288,8 @@
   <main class="wrap">
     <div class="summary">
       <div><b>행사 기간</b><span>2026.06.08 ~ 2026.07.05</span></div>
-      <div><b>공통 혜택</b><span>구매금액 기준 디지털 온누리상품권 20%</span></div>
+      <div><b>공통 혜택</b><span>디지털 온누리상품권 20% 대상 여부 확인</span></div>
       <div><b>네이버 혜택</b><span>일부 모델 쿠폰, 멤버십, 카드 혜택</span></div>
-      <div><b>가격 기준</b><span>2026.06.22 네이버 노출 할인가 기준</span></div>
     </div>
 
     <section id="aircon">
@@ -318,22 +305,13 @@
           <div class="badge-row"><span class="badge green">가성비 스탠드</span><span class="badge">기본설치</span></div>
           <h3>삼성 Q9000 스탠드형 에어컨 AF60F17D11BS</h3>
           <p class="meta">거실 1대 중심으로 보는 경우 먼저 비교하기 좋은 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>1,599,000원</b><br>쿠폰과 설치 조건은 결제 전 확인하세요.</p>
-          <a class="btn" href="https://naver.me/FlBICvxy">네이버에서 혜택가 확인</a>
+          <a class="btn" href="https://naver.me/FlBICvxy">네이버에서 상품 확인</a>
         </article>
         <article class="card">
           <div class="badge-row"><span class="badge">멀티형</span><span class="badge amber">희망일배송</span></div>
           <h3>삼성 무풍 에어컨 멀티형 AF70F17D11BRS</h3>
           <p class="meta">거실과 방을 함께 쓰는 구성에서 먼저 확인할 만한 모델입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>2,358,000원</b><br>동일 가격 후보가 있어 설치 조건 비교가 중요합니다.</p>
-          <a class="btn" href="https://naver.me/xvCh9ElV">네이버에서 혜택가 확인</a>
-        </article>
-        <article class="card">
-          <div class="badge-row"><span class="badge green">창문형</span><span class="badge">자가설치</span></div>
-          <h3>삼성 비스포크 윈도우핏 창문형 에어컨 AW06C7155GWAY</h3>
-          <p class="meta">방이나 원룸용 에어컨을 찾는 경우 판매량과 리뷰가 많은 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>899,000원</b><br>창문 규격과 자가설치 가능 여부를 확인하세요.</p>
-          <a class="btn" href="https://naver.me/FNtwOnO4">네이버에서 혜택가 확인</a>
+          <a class="btn" href="https://naver.me/xvCh9ElV">네이버에서 상품 확인</a>
         </article>
       </div>
     </section>
@@ -342,7 +320,7 @@
       <div class="section-head">
         <div>
           <h2>비스포크 가전</h2>
-          <p class="section-note">냉장고, 세탁건조기, 식기세척기처럼 체감가와 설치 조건 차이가 큰 카테고리입니다.</p>
+          <p class="section-note">냉장고, 세탁건조기, 식기세척기처럼 설치 조건 차이가 큰 카테고리입니다.</p>
         </div>
         <a class="more" href="https://shopping.naver.com/festa/onsale/play/69cb0edbf84a59531afbdfce?tr=prosol">비스포크 전체 보기</a>
       </div>
@@ -351,36 +329,31 @@
           <div class="badge-row"><span class="badge green">냉장고 가성비</span><span class="badge">1등급</span></div>
           <h3>비스포크 AI 냉장고 4도어 RM70F90R1ZD</h3>
           <p class="meta">대용량 4도어 냉장고를 우선순위로 보는 경우 확인할 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>2,348,000원</b><br>상품명 기준 체감가 150만원대 문구가 있어 조건 확인이 필요합니다.</p>
-          <a class="btn" href="https://naver.me/FbVJ3YbY">네이버에서 혜택가 확인</a>
+          <a class="btn" href="https://naver.me/FbVJ3YbY">네이버에서 상품 확인</a>
         </article>
         <article class="card">
           <div class="badge-row"><span class="badge">AI콤보 일체형</span><span class="badge">1등급</span></div>
           <h3>삼성 WD80H25BHY 비스포크 AI콤보 세탁25kg 건조18kg</h3>
           <p class="meta">세탁기와 건조기를 한 대로 쓰려는 경우 확인할 26년형 일체형 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>3,299,000원</b><br>설치 공간과 도어 방향을 같이 확인하세요.</p>
-          <a class="btn" href="https://naver.me/xJcuzYUn">네이버에서 혜택가 확인</a>
+          <a class="btn" href="https://naver.me/xJcuzYUn">네이버에서 상품 확인</a>
         </article>
         <article class="card">
           <div class="badge-row"><span class="badge green">주방 가전</span><span class="badge amber">예약판매</span></div>
           <h3>삼성전자 14인용 AI 맞춤세척 식기세척기 DW80H73Y1UZ</h3>
-          <p class="meta">식기세척기 라인에서 낮은 가격대와 신모델 여부를 같이 보는 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>1,140,000원</b><br>예약판매 일정과 설치 조건을 확인하세요.</p>
-          <a class="btn" href="https://naver.me/xSBqx31f">네이버에서 혜택가 확인</a>
+          <p class="meta">식기세척기 라인에서 신모델 여부와 설치 조건을 같이 보는 후보입니다.</p>
+          <a class="btn" href="https://naver.me/xSBqx31f">네이버에서 상품 확인</a>
         </article>
         <article class="card">
           <div class="badge-row"><span class="badge green">빌트인 정수기</span></div>
           <h3>삼성 비스포크 직수 빌트인 정수기</h3>
-          <p class="meta">싱크대 아래 설치형 정수기를 낮은 가격대에서 비교할 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>729,000원</b><br>설치 가능 공간과 필터 조건을 확인하세요.</p>
-          <a class="btn" href="https://naver.me/GVVoJjO5">네이버에서 혜택가 확인</a>
+          <p class="meta">싱크대 아래 설치형 정수기를 빌트인 구성으로 비교할 후보입니다.</p>
+          <a class="btn" href="https://naver.me/GVVoJjO5">네이버에서 상품 확인</a>
         </article>
         <article class="card">
           <div class="badge-row"><span class="badge green">3구 인덕션</span></div>
           <h3>삼성 비스포크 3구 인덕션 CC80F63W1Z</h3>
           <p class="meta">주방 교체를 생각한다면 식기세척기와 함께 비교하기 좋은 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>879,000원</b><br>빌트인 설치 조건과 전기 공사를 확인하세요.</p>
-          <a class="btn" href="https://naver.me/GmpU2jXw">네이버에서 혜택가 확인</a>
+          <a class="btn" href="https://naver.me/GmpU2jXw">네이버에서 상품 확인</a>
         </article>
       </div>
     </section>
@@ -389,7 +362,7 @@
       <div class="section-head">
         <div>
           <h2>TV</h2>
-          <p class="section-note">거실용은 패널 등급과 인치, 방용은 가격대를 분리해서 보는 편이 좋습니다.</p>
+          <p class="section-note">거실용은 패널 등급과 인치, 방용은 크기와 설치 방식을 분리해서 보는 편이 좋습니다.</p>
         </div>
         <a class="more" href="https://shopping.naver.com/festa/onsale/play/6a0cfcfb75387275338ffcdb?tr=prosol">TV 전체 보기</a>
       </div>
@@ -398,22 +371,19 @@
           <div class="badge-row"><span class="badge">65인치 QLED</span><span class="badge">1등급</span></div>
           <h3>삼성 QLED AI 4K TV KQ65QF7DAFXKR</h3>
           <p class="meta">거실용 QLED를 65인치 기준으로 보는 경우 균형이 좋은 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>1,435,000원</b><br>설치 방식과 스탠드/벽걸이를 확인하세요.</p>
-          <a class="btn" href="https://naver.me/FDchrfQL">네이버에서 혜택가 확인</a>
+          <a class="btn" href="https://naver.me/FDchrfQL">네이버에서 상품 확인</a>
         </article>
         <article class="card">
           <div class="badge-row"><span class="badge green">55인치 가성비</span></div>
           <h3>삼성 55인치 UHD 4K 비즈니스 TV LH55BEFHLGFXKR</h3>
-          <p class="meta">거실과 방용 사이에서 가격, 크기, 판매량을 함께 볼 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>669,000원</b><br>상품명 기준 체감가 47만원 문구가 있습니다.</p>
-          <a class="btn" href="https://naver.me/xF4CzsiI">네이버에서 혜택가 확인</a>
+          <p class="meta">거실과 방용 사이에서 크기, 판매량, 설치 방식을 함께 볼 후보입니다.</p>
+          <a class="btn" href="https://naver.me/xF4CzsiI">네이버에서 상품 확인</a>
         </article>
         <article class="card">
           <div class="badge-row"><span class="badge green">방용/서브</span></div>
           <h3>삼성 50인치 UHD 4K 비즈니스 TV LH50BEFHLGFXKR</h3>
-          <p class="meta">작은 거실이나 방용으로 가격 부담을 낮추고 싶을 때 보는 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>559,000원</b><br>상품명 기준 체감가 37.4만원 문구가 있습니다.</p>
-          <a class="btn" href="https://naver.me/xbKxuqCA">네이버에서 혜택가 확인</a>
+          <p class="meta">작은 거실이나 방용으로 부담 없이 비교해볼 수 있는 후보입니다.</p>
+          <a class="btn" href="https://naver.me/xbKxuqCA">네이버에서 상품 확인</a>
         </article>
       </div>
     </section>
@@ -430,23 +400,20 @@
         <article class="card">
           <div class="badge-row"><span class="badge green">S26 기본형</span><span class="badge">256GB</span></div>
           <h3>갤럭시 S26 256GB 자급제 SM-S942N</h3>
-          <p class="meta">S26 시리즈 중 가격 부담을 낮추고 자급제로 보려는 경우 먼저 확인할 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>1,201,210원</b><br>상품명 기준 LIVE 혜택가 74만원 문구가 있습니다.</p>
-          <a class="btn" href="https://naver.me/IDkH7XT9">네이버에서 혜택가 확인</a>
+          <p class="meta">S26 시리즈 중 기본형 자급제를 보려는 경우 먼저 확인할 후보입니다.</p>
+          <a class="btn" href="https://naver.me/IDkH7XT9">네이버에서 상품 확인</a>
         </article>
         <article class="card">
           <div class="badge-row"><span class="badge green">S26 플러스</span><span class="badge">512GB</span></div>
           <h3>갤럭시 S26 플러스 512GB 자급제 SM-S947N</h3>
-          <p class="meta">저장공간 512GB를 보면서 울트라보다 가격 부담을 낮추고 싶을 때 볼 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>1,633,220원</b><br>상품명 기준 LIVE 혜택가 87만원 문구가 있습니다.</p>
-          <a class="btn" href="https://naver.me/xgXZ6HIT">네이버에서 혜택가 확인</a>
+          <p class="meta">저장공간 512GB를 보면서 플러스 모델을 우선 비교할 때 볼 후보입니다.</p>
+          <a class="btn" href="https://naver.me/xgXZ6HIT">네이버에서 상품 확인</a>
         </article>
         <article class="card">
           <div class="badge-row"><span class="badge">S26 울트라</span><span class="badge">256GB</span></div>
           <h3>갤럭시 S26 울트라 256GB 자급제 SM-S948N</h3>
           <p class="meta">카메라와 최상위 사양을 우선으로 보는 경우 비교할 대표 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>1,721,720원</b><br>상품명 기준 LIVE 혜택가 111만원 문구가 있습니다.</p>
-          <a class="btn" href="https://naver.me/G1poY7s6">네이버에서 혜택가 확인</a>
+          <a class="btn" href="https://naver.me/G1poY7s6">네이버에서 상품 확인</a>
         </article>
       </div>
     </section>
@@ -463,23 +430,20 @@
         <article class="card">
           <div class="badge-row"><span class="badge green">노트북 가성비</span></div>
           <h3>갤럭시북4 NT750XGR-A51A i5 16GB 256GB</h3>
-          <p class="meta">인강, 문서, 사무용으로 가격대를 낮춰 볼 때 먼저 확인할 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>1,148,000원</b><br>윈도우 포함 여부와 저장공간을 확인하세요.</p>
-          <a class="btn" href="https://naver.me/GZDHJTrs">네이버에서 혜택가 확인</a>
+          <p class="meta">인강, 문서, 사무용으로 무난한 구성을 먼저 확인할 후보입니다.</p>
+          <a class="btn" href="https://naver.me/GZDHJTrs">네이버에서 상품 확인</a>
         </article>
         <article class="card">
           <div class="badge-row"><span class="badge">프로 노트북</span></div>
           <h3>갤럭시북5 프로 NT960XHA-K71AR U7 32GB</h3>
           <p class="meta">성능 여유와 메모리 32GB를 우선으로 보는 경우 비교할 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>3,099,000원</b><br>상품명 기준 혜택가 209만원 문구가 있습니다.</p>
-          <a class="btn" href="https://naver.me/FYrPZiS3">네이버에서 혜택가 확인</a>
+          <a class="btn" href="https://naver.me/FYrPZiS3">네이버에서 상품 확인</a>
         </article>
         <article class="card">
           <div class="badge-row"><span class="badge green">태블릿 가성비</span></div>
           <h3>갤럭시탭 S10 FE WiFi SM-X520</h3>
           <p class="meta">영상, 학습용 태블릿을 Wi-Fi 모델로 가성비 있게 볼 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>774,610원</b><br>5G가 꼭 필요하지 않다면 먼저 비교하세요.</p>
-          <a class="btn" href="https://naver.me/5xgO1xoD">네이버에서 혜택가 확인</a>
+          <a class="btn" href="https://naver.me/5xgO1xoD">네이버에서 상품 확인</a>
         </article>
       </div>
     </section>
@@ -496,23 +460,20 @@
         <article class="card">
           <div class="badge-row"><span class="badge green">이어폰 가성비</span></div>
           <h3>삼성 갤럭시 버즈3 FE SM-R420N</h3>
-          <p class="meta">가격 부담을 낮추고 ANC 이어폰을 보려는 경우 먼저 확인할 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>159,000원</b><br>색상과 라이브 혜택 조건을 확인하세요.</p>
-          <a class="btn" href="https://naver.me/xzH7b179">네이버에서 혜택가 확인</a>
+          <p class="meta">ANC 이어폰을 가볍게 시작하려는 경우 먼저 확인할 후보입니다.</p>
+          <a class="btn" href="https://naver.me/xzH7b179">네이버에서 상품 확인</a>
         </article>
         <article class="card">
           <div class="badge-row"><span class="badge">프로 이어폰</span></div>
           <h3>삼성 갤럭시 버즈3 프로 SM-R630N</h3>
           <p class="meta">음질과 노이즈 캔슬링을 더 중시할 때 비교하기 좋은 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>239,000원</b><br>라이브 상품과 일반 상품의 조건을 비교하세요.</p>
-          <a class="btn" href="https://naver.me/xwoohar3">네이버에서 혜택가 확인</a>
+          <a class="btn" href="https://naver.me/xwoohar3">네이버에서 상품 확인</a>
         </article>
         <article class="card">
           <div class="badge-row"><span class="badge green">워치 입문</span></div>
           <h3>삼성 갤럭시 워치8 40mm 블루투스</h3>
           <p class="meta">운동, 수면 기록용 워치를 작은 사이즈로 보려는 경우 확인할 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>398,000원</b><br>40mm/44mm와 LTE 여부를 비교하세요.</p>
-          <a class="btn" href="https://naver.me/FEgWbFKk">네이버에서 혜택가 확인</a>
+          <a class="btn" href="https://naver.me/5JqpNSRP">네이버에서 상품 확인</a>
         </article>
       </div>
     </section>
@@ -528,16 +489,14 @@
         <article class="card">
           <div class="badge-row"><span class="badge green">게이밍 가성비</span></div>
           <h3>삼성 오디세이 G5 LS32CG550 QHD 165Hz</h3>
-          <p class="meta">QHD 게이밍 모니터를 체감가 기준으로 강하게 볼 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>299,000원</b><br>상품명 기준 체감가 18.9만원 문구가 있습니다.</p>
-          <a class="btn" href="https://naver.me/xZKq0n20">네이버에서 혜택가 확인</a>
+          <p class="meta">QHD 게이밍 모니터를 주사율과 해상도 기준으로 볼 후보입니다.</p>
+          <a class="btn" href="https://naver.me/FEgWbFKk">네이버에서 상품 확인</a>
         </article>
         <article class="card">
           <div class="badge-row"><span class="badge">4K 모니터</span></div>
           <h3>삼성 오디세이 G7 S32DG700 32인치 4K IPS</h3>
           <p class="meta">게임과 작업을 함께 고려할 때 비교하기 좋은 4K 후보입니다.</p>
-          <p class="price">확인 시점 표시 할인가: <b>759,000원</b><br>상품명 기준 체감가 50.4만원 문구가 있습니다.</p>
-          <a class="btn" href="https://naver.me/xVRLiqTh">네이버에서 혜택가 확인</a>
+          <a class="btn" href="https://naver.me/xZKq0n20">네이버에서 상품 확인</a>
         </article>
       </div>
     </section>
@@ -545,7 +504,7 @@
     <section>
       <div class="card">
         <h2>확인 전 체크</h2>
-        <p class="meta">동일 모델도 판매자, 카드, 멤버십, 쿠폰, 설치비, 배송 조건에 따라 최종 금액이 달라질 수 있습니다. 이 페이지의 가격 정보는 2026.06.22 확인 시점의 네이버 행사 페이지 정보를 바탕으로 정리했으며, 실제 결제 전 최종 혜택가와 조건을 반드시 확인하세요.</p>
+        <p class="meta">동일 모델도 판매자, 카드, 멤버십, 쿠폰, 설치비, 배송 조건에 따라 적용 조건이 달라질 수 있습니다. 실제 결제 전 상품 상세와 행사 조건을 반드시 확인하세요.</p>
         <a class="subbtn" href="https://shopping.naver.com/festa/onsale/play/6a0bf4b775387275338fd687?tr=prosol">삼성전자 행사 메인 페이지 보기</a>
       </div>
     </section>
