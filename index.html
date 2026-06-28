@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>삼성전자 감사 페스티벌 추천 모델</title>
+  <meta name="description" content="네이버 넾다세일 삼성전자 감사 페스티벌 상품을 카테고리별로 정리한 추천 링크 페이지입니다.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18212f;
+      --muted: #667085;
+      --line: #e6e8ef;
+      --panel: #ffffff;
+      --soft: #f5f7fb;
+      --blue: #1769ff;
+      --green: #00a862;
+      --amber: #b76e00;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--soft);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1040px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero {
+      padding: 34px 0 24px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 800;
+      margin: 0 0 8px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(29px, 5vw, 48px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 720px;
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .notice {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid #d7e4ff;
+      background: #f1f6ff;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #25416e;
+    }
+
+    nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 16px 0 18px;
+      scrollbar-width: none;
+    }
+
+    nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    nav a {
+      flex: 0 0 auto;
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #344054;
+    }
+
+    main {
+      padding: 26px 0 48px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .summary div {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .summary b {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    .summary span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    section {
+      margin-top: 34px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: 0;
+    }
+
+    .section-note {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .more {
+      flex: 0 0 auto;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      min-height: 100%;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .badge {
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #eef4ff;
+      color: #1849a9;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .badge.green {
+      background: #e7f8ef;
+      color: #067647;
+    }
+
+    .badge.amber {
+      background: #fff4df;
+      color: #92400e;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .meta {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 42px;
+      width: 100%;
+      border-radius: 8px;
+      background: var(--blue);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .subbtn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 38px;
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: #344054;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    footer {
+      padding: 28px 0 42px;
+      border-top: 1px solid var(--line);
+      background: #fff;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 820px) {
+      .summary,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap hero">
+      <p class="eyebrow">NAVER 넾다세일 · 삼성전자 감사 페스티벌</p>
+      <h1>카테고리별 추천 모델만 가볍게 보기</h1>
+      <p class="lead">같은 모델도 판매자와 혜택 조건이 달라질 수 있어요. 이 페이지는 전체 상품 나열이 아니라 먼저 확인할 만한 후보만 정리했습니다.</p>
+      <div class="notice">이 페이지에는 네이버 쇼핑 커넥트 제휴 링크가 포함되어 있으며, 링크를 통한 구매 시 작성자에게 수수료가 지급될 수 있습니다.</div>
+    </div>
+    <nav class="wrap" aria-label="카테고리">
+      <a href="#aircon">에어컨</a>
+      <a href="#bespoke">비스포크 가전</a>
+      <a href="#tv">TV</a>
+      <a href="#galaxy">갤럭시</a>
+      <a href="#booktab">북 & 탭</a>
+      <a href="#wearable">웨어러블</a>
+      <a href="#monitor">모니터</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div class="summary">
+      <div><b>행사 기간</b><span>2026.06.08 ~ 2026.07.05</span></div>
+      <div><b>공통 혜택</b><span>디지털 온누리상품권 20% 대상 여부 확인</span></div>
+      <div><b>네이버 혜택</b><span>일부 모델 쿠폰, 멤버십, 카드 혜택</span></div>
+    </div>
+
+    <section id="aircon">
+      <div class="section-head">
+        <div>
+          <h2>에어컨</h2>
+          <p class="section-note">설치 포함 여부와 멀티형/스탠드형 구분을 먼저 확인하세요.</p>
+        </div>
+        <a class="more" href="https://shopping.naver.com/festa/onsale/play/69df5d962348c42f2bd25e3c?tr=prosol">에어컨 전체 보기</a>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="badge-row"><span class="badge green">가성비 스탠드</span><span class="badge">기본설치</span></div>
+          <h3>삼성 Q9000 스탠드형 에어컨 AF60F17D11BS</h3>
+          <p class="meta">거실 1대 중심으로 보는 경우 먼저 비교하기 좋은 후보입니다.</p>
+          <a class="btn" href="https://naver.me/FlBICvxy">네이버에서 상품 확인</a>
+        </article>
+        <article class="card">
+          <div class="badge-row"><span class="badge">멀티형</span><span class="badge amber">희망일배송</span></div>
+          <h3>삼성 무풍 에어컨 멀티형 AF70F17D11BRS</h3>
+          <p class="meta">거실과 방을 함께 쓰는 구성에서 먼저 확인할 만한 모델입니다.</p>
+          <a class="btn" href="https://naver.me/xvCh9ElV">네이버에서 상품 확인</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="bespoke">
+      <div class="section-head">
+        <div>
+          <h2>비스포크 가전</h2>
+          <p class="section-note">냉장고, 세탁건조기, 식기세척기처럼 설치 조건 차이가 큰 카테고리입니다.</p>
+        </div>
+        <a class="more" href="https://shopping.naver.com/festa/onsale/play/69cb0edbf84a59531afbdfce?tr=prosol">비스포크 전체 보기</a>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="badge-row"><span class="badge green">냉장고 가성비</span><span class="badge">1등급</span></div>
+          <h3>비스포크 AI 냉장고 4도어 RM70F90R1ZD</h3>
+          <p class="meta">대용량 4도어 냉장고를 우선순위로 보는 경우 확인할 후보입니다.</p>
+          <a class="btn" href="https://naver.me/FbVJ3YbY">네이버에서 상품 확인</a>
+        </article>
+        <article class="card">
+          <div class="badge-row"><span class="badge">AI콤보 일체형</span><span class="badge">1등급</span></div>
+          <h3>삼성 WD80H25BHY 비스포크 AI콤보 세탁25kg 건조18kg</h3>
+          <p class="meta">세탁기와 건조기를 한 대로 쓰려는 경우 확인할 26년형 일체형 후보입니다.</p>
+          <a class="btn" href="https://naver.me/xJcuzYUn">네이버에서 상품 확인</a>
+        </article>
+        <article class="card">
+          <div class="badge-row"><span class="badge green">주방 가전</span><span class="badge amber">예약판매</span></div>
+          <h3>삼성전자 14인용 AI 맞춤세척 식기세척기 DW80H73Y1UZ</h3>
+          <p class="meta">식기세척기 라인에서 신모델 여부와 설치 조건을 같이 보는 후보입니다.</p>
+          <a class="btn" href="https://naver.me/xSBqx31f">네이버에서 상품 확인</a>
+        </article>
+        <article class="card">
+          <div class="badge-row"><span class="badge green">빌트인 정수기</span></div>
+          <h3>삼성 비스포크 직수 빌트인 정수기</h3>
+          <p class="meta">싱크대 아래 설치형 정수기를 빌트인 구성으로 비교할 후보입니다.</p>
+          <a class="btn" href="https://naver.me/GVVoJjO5">네이버에서 상품 확인</a>
+        </article>
+        <article class="card">
+          <div class="badge-row"><span class="badge green">3구 인덕션</span></div>
+          <h3>삼성 비스포크 3구 인덕션 CC80F63W1Z</h3>
+          <p class="meta">주방 교체를 생각한다면 식기세척기와 함께 비교하기 좋은 후보입니다.</p>
+          <a class="btn" href="https://naver.me/GmpU2jXw">네이버에서 상품 확인</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="tv">
+      <div class="section-head">
+        <div>
+          <h2>TV</h2>
+          <p class="section-note">거실용은 패널 등급과 인치, 방용은 크기와 설치 방식을 분리해서 보는 편이 좋습니다.</p>
+        </div>
+        <a class="more" href="https://shopping.naver.com/festa/onsale/play/6a0cfcfb75387275338ffcdb?tr=prosol">TV 전체 보기</a>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="badge-row"><span class="badge">65인치 QLED</span><span class="badge">1등급</span></div>
+          <h3>삼성 QLED AI 4K TV KQ65QF7DAFXKR</h3>
+          <p class="meta">거실용 QLED를 65인치 기준으로 보는 경우 균형이 좋은 후보입니다.</p>
+          <a class="btn" href="https://naver.me/FDchrfQL">네이버에서 상품 확인</a>
+        </article>
+        <article class="card">
+          <div class="badge-row"><span class="badge green">55인치 가성비</span></div>
+          <h3>삼성 55인치 UHD 4K 비즈니스 TV LH55BEFHLGFXKR</h3>
+          <p class="meta">거실과 방용 사이에서 크기, 판매량, 설치 방식을 함께 볼 후보입니다.</p>
+          <a class="btn" href="https://naver.me/xF4CzsiI">네이버에서 상품 확인</a>
+        </article>
+        <article class="card">
+          <div class="badge-row"><span class="badge green">방용/서브</span></div>
+          <h3>삼성 50인치 UHD 4K 비즈니스 TV LH50BEFHLGFXKR</h3>
+          <p class="meta">작은 거실이나 방용으로 부담 없이 비교해볼 수 있는 후보입니다.</p>
+          <a class="btn" href="https://naver.me/xbKxuqCA">네이버에서 상품 확인</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="galaxy">
+      <div class="section-head">
+        <div>
+          <h2>갤럭시 S26 시리즈</h2>
+          <p class="section-note">세부 페이지 기준으로 S26 자급제 후보를 먼저 골랐습니다. 라이브 혜택 문구는 시간과 조건을 꼭 확인하세요.</p>
+        </div>
+        <a class="more" href="https://shopping.naver.com/festa/onsale/play/695e1aa241a3bb11213c48a3?tr=prosol">S26 시리즈 전체 보기</a>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="badge-row"><span class="badge green">S26 기본형</span><span class="badge">256GB</span></div>
+          <h3>갤럭시 S26 256GB 자급제 SM-S942N</h3>
+          <p class="meta">S26 시리즈 중 기본형 자급제를 보려는 경우 먼저 확인할 후보입니다.</p>
+          <a class="btn" href="https://naver.me/IDkH7XT9">네이버에서 상품 확인</a>
+        </article>
+        <article class="card">
+          <div class="badge-row"><span class="badge green">S26 플러스</span><span class="badge">512GB</span></div>
+          <h3>갤럭시 S26 플러스 512GB 자급제 SM-S947N</h3>
+          <p class="meta">저장공간 512GB를 보면서 플러스 모델을 우선 비교할 때 볼 후보입니다.</p>
+          <a class="btn" href="https://naver.me/xgXZ6HIT">네이버에서 상품 확인</a>
+        </article>
+        <article class="card">
+          <div class="badge-row"><span class="badge">S26 울트라</span><span class="badge">256GB</span></div>
+          <h3>갤럭시 S26 울트라 256GB 자급제 SM-S948N</h3>
+          <p class="meta">카메라와 최상위 사양을 우선으로 보는 경우 비교할 대표 후보입니다.</p>
+          <a class="btn" href="https://naver.me/G1poY7s6">네이버에서 상품 확인</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="booktab">
+      <div class="section-head">
+        <div>
+          <h2>갤럭시 북 & 탭</h2>
+          <p class="section-note">노트북은 RAM과 저장공간, 태블릿은 Wi-Fi/5G와 용량을 먼저 보세요.</p>
+        </div>
+        <a class="more" href="https://shopping.naver.com/festa/onsale/play/697805b94347b957a81fd08d?tr=prosol">북 & 탭 전체 보기</a>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="badge-row"><span class="badge green">노트북 가성비</span></div>
+          <h3>갤럭시북4 NT750XGR-A51A i5 16GB 256GB</h3>
+          <p class="meta">인강, 문서, 사무용으로 무난한 구성을 먼저 확인할 후보입니다.</p>
+          <a class="btn" href="https://naver.me/GZDHJTrs">네이버에서 상품 확인</a>
+        </article>
+        <article class="card">
+          <div class="badge-row"><span class="badge">프로 노트북</span></div>
+          <h3>갤럭시북5 프로 NT960XHA-K71AR U7 32GB</h3>
+          <p class="meta">성능 여유와 메모리 32GB를 우선으로 보는 경우 비교할 후보입니다.</p>
+          <a class="btn" href="https://naver.me/FYrPZiS3">네이버에서 상품 확인</a>
+        </article>
+        <article class="card">
+          <div class="badge-row"><span class="badge green">태블릿 가성비</span></div>
+          <h3>갤럭시탭 S10 FE WiFi SM-X520</h3>
+          <p class="meta">영상, 학습용 태블릿을 Wi-Fi 모델로 가성비 있게 볼 후보입니다.</p>
+          <a class="btn" href="https://naver.me/5xgO1xoD">네이버에서 상품 확인</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="wearable">
+      <div class="section-head">
+        <div>
+          <h2>웨어러블</h2>
+          <p class="section-note">이어폰은 버즈 FE/프로, 워치는 크기와 블루투스/LTE 구분을 먼저 확인하세요.</p>
+        </div>
+        <a class="more" href="https://shopping.naver.com/festa/onsale/play/6a20fc02109e0f3ccfa34db8?tr=prosol">웨어러블 전체 보기</a>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="badge-row"><span class="badge green">이어폰 가성비</span></div>
+          <h3>삼성 갤럭시 버즈3 FE SM-R420N</h3>
+          <p class="meta">ANC 이어폰을 가볍게 시작하려는 경우 먼저 확인할 후보입니다.</p>
+          <a class="btn" href="https://naver.me/xzH7b179">네이버에서 상품 확인</a>
+        </article>
+        <article class="card">
+          <div class="badge-row"><span class="badge">프로 이어폰</span></div>
+          <h3>삼성 갤럭시 버즈3 프로 SM-R630N</h3>
+          <p class="meta">음질과 노이즈 캔슬링을 더 중시할 때 비교하기 좋은 후보입니다.</p>
+          <a class="btn" href="https://naver.me/xwoohar3">네이버에서 상품 확인</a>
+        </article>
+        <article class="card">
+          <div class="badge-row"><span class="badge green">워치 입문</span></div>
+          <h3>삼성 갤럭시 워치8 40mm 블루투스</h3>
+          <p class="meta">운동, 수면 기록용 워치를 작은 사이즈로 보려는 경우 확인할 후보입니다.</p>
+          <a class="btn" href="https://naver.me/5JqpNSRP">네이버에서 상품 확인</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="monitor">
+      <div class="section-head">
+        <div>
+          <h2>모니터</h2>
+          <p class="section-note">모니터는 해상도, 주사율, 사용 목적을 나눠서 확인하세요.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="badge-row"><span class="badge green">게이밍 가성비</span></div>
+          <h3>삼성 오디세이 G5 LS32CG550 QHD 165Hz</h3>
+          <p class="meta">QHD 게이밍 모니터를 주사율과 해상도 기준으로 볼 후보입니다.</p>
+          <a class="btn" href="https://naver.me/FEgWbFKk">네이버에서 상품 확인</a>
+        </article>
+        <article class="card">
+          <div class="badge-row"><span class="badge">4K 모니터</span></div>
+          <h3>삼성 오디세이 G7 S32DG700 32인치 4K IPS</h3>
+          <p class="meta">게임과 작업을 함께 고려할 때 비교하기 좋은 4K 후보입니다.</p>
+          <a class="btn" href="https://naver.me/xZKq0n20">네이버에서 상품 확인</a>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2>확인 전 체크</h2>
+        <p class="meta">동일 모델도 판매자, 카드, 멤버십, 쿠폰, 설치비, 배송 조건에 따라 적용 조건이 달라질 수 있습니다. 실제 결제 전 상품 상세와 행사 조건을 반드시 확인하세요.</p>
+        <a class="subbtn" href="https://shopping.naver.com/festa/onsale/play/6a0bf4b775387275338fd687?tr=prosol">삼성전자 행사 메인 페이지 보기</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      이 페이지는 구매 판단을 돕기 위한 큐레이션 페이지입니다. 판매, 배송, 설치, 환불, 사은 혜택은 각 판매처와 네이버 쇼핑의 조건을 따릅니다.
+    </div>
+  </footer>
+</body>
+</html>
